@@ -292,6 +292,13 @@
               transitionFound = true;
             }
           }
+
+          console.log(
+            "p:"+this.routeExit[0]+"=>"+this.routeExit[1]+
+            "|t:"+transitionFound+""
+            );
+
+
           if (!transitionFound) {
             this.animations = this.animationsArray[0];
           }
