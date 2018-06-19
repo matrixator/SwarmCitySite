@@ -228,6 +228,7 @@
 
         // disable double tap zoom
         let lastTouchEnd = 0;
+        document.addEventListener('deleteAccount', this._deleteAccount);
         document.addEventListener('touchend', function(event) {
           let now = (new Date()).getTime();
           if (now - lastTouchEnd <= 300) {
@@ -236,6 +237,11 @@
           lastTouchEnd = now;
         }, false);
       }
+
+      _deleteAccount() {
+        console.log("swarmcity deleteAccount");
+        //this.$.resizeavatar._deleteAccount();
+      }      
 
       /**
       * Routs the user back to previous page when pressed Escape

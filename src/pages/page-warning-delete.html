@@ -229,6 +229,8 @@ This code may only be used under the license found at https://github.com/swarmci
                     keyStore: {}};
                 localStorage.setItem('SwarmCity', JSON.stringify(storage));
                 this.path = '/';
+                this.dispatchEvent(new CustomEvent('deleteAccount', {bubbles: true, composed: true}));
+                this.fire('deleteAccount1', 'bubbling');
             }
             /**
             * changes the current path
