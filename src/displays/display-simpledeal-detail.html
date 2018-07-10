@@ -633,6 +633,8 @@ This code may only be used under the license found at https://github.com/swarmci
             */
             _stateChange() {
                 this.state = this.stateChange;
+                console.log("state::",this.state,"stateChange::",this.stateChange);
+
             }
             /**
             * Set the conditions for showing the cancel button
@@ -662,6 +664,7 @@ This code may only be used under the license found at https://github.com/swarmci
             _reset() {
                 this.stateChange = 'replies';
             }
+
         }
         window.customElements.define(MySimpledealDetail.is, MySimpledealDetail);
     </script>

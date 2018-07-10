@@ -45,7 +45,7 @@ The following custom properties and mixins are available for styling:
             }
 
             .back {
-                @apply --icon-button-mini;
+                @apply --icon-button-medium;
             }
 
             .back:active {
@@ -67,12 +67,12 @@ The following custom properties and mixins are available for styling:
 
             .descriptionbox {
                 @apply --layout-horizontal;
-                margin-top: 25px;
+                margin-top: 20px;
             }
 
             .description {
                 @apply --layout-flex;
-                @apply --body-default;
+                @apply --body-detail;
                 color: var(--sc-grey4);
             }
 
@@ -81,7 +81,7 @@ The following custom properties and mixins are available for styling:
                 text-align: right;
                 color: var(--sc-grey4);
                 white-space: nowrap;
-                margin: 0px 0px 0px 20px;
+                margin: 0px 0px 0px 10px;
                 @apply --layout-horizontal;
                 @apply --layout-start;
                 @apply --layout-start-justified;
@@ -110,12 +110,19 @@ The following custom properties and mixins are available for styling:
                 @apply --text-button-big;
                 @apply --body-bold;
                 color: var(--sc-grey4);
-                margin: 40px 0;
+                margin: 30px 0 20px 0;
             }
 
             .button:active{
                 @apply --button-active;
             }
+            
+            .vmarkmini {
+                @apply --vmark-grey4-mini;
+                opacity: 0.1;
+                margin-right: 2px;
+            }
+
 
             @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
             only screen and (min--moz-device-pixel-ratio: 1.5),
@@ -133,7 +140,7 @@ The following custom properties and mixins are available for styling:
             </div>
             <div class="descriptionbox">
                 <div class="description">[[selectedReply.description]]</div>
-                <div class="price">for [[_formatValue(hashtagItem.value)]] SWT</div>
+                <div class="price"><div class="vmarkmini"></div> [[_formatValue(hashtagItem.value)]] SWT</div>
             </div>
             <div class="date">
                 [[_formatDate(selectedReply.dateTime)]]
